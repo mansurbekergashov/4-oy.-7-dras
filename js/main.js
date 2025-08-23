@@ -14,12 +14,8 @@ elHands.forEach((el) => {
             const winner = checkWinner(ai, player);
             elAI.src = `./images/${ai}.svg`;
             elStatusText.textContent = winner;
-            
 
         }, 1000);
-
-
-
 
     });
 });
