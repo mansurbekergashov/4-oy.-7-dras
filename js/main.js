@@ -11,10 +11,9 @@ elHands.forEach((el) => {
         switchZone(true);
         setTimeout(() => {
             const ai = aiChoose();
-            // const winner = checkWinner(ai, player);
-            // elAI.src = `./images/${ai}.svg`;
-            // elStatusText.textContent = winner;
-            console.log(ai);
+            const winner = checkWinner(ai, player);
+            elAI.src = `./images/${ai}.svg`;
+            elStatusText.textContent = winner;
             
 
         }, 1000);
