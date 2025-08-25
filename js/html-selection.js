@@ -5,5 +5,11 @@ const elStatusZone = document.getElementById("statusZone");
 const elChooseZone = document.getElementById("chooseZone");
 const elRefreshGameButton = document.getElementById("refreshGameButton");
 const elStatusText = document.getElementById("statusText");
+const elScore = document.getElementById("score");
+const elModeChanger=document.getElementById("modeChanger");
+const elHandsHard = document.querySelectorAll(".mode-hard");
+const elZoneGrid=document.getElementById("zoneGrid");
 
-export { elHands, elPlayer, elStatusZone, elChooseZone, elRefreshGameButton, elAI, elStatusText };
+
+
+export { elHands, elPlayer, elStatusZone, elChooseZone, elRefreshGameButton, elAI, elStatusText, elScore, elModeChanger, elHandsHard, elZoneGrid };

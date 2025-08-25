@@ -6,26 +6,44 @@
     <title>Don-don ziki</title>
     <link rel="stylesheet" href="./css/output.css">
   </head>
-  <body>
+  <body class="bg-[radial-gradient(134.34%_134.34%_at_50%_0%,_#1F3757_0%,_#131537_100%)] h-full">
+
+
+    <div class="flex justify-center pt-4">
+        <div class="w-175 h-[150px] border-2 rounded-[15px] flex justify-around items-center">
+            <img class="w-[155px] h-[92px]" src="./images/logo.svg" alt="logo">
+            <div class="w-[150px] h-[114px] bg-box bg-[#F3F3F3] rounded-[8px] flex flex-col items-center">
+                <p class="text-[#2A45C2] text-[16px] font-mono">SCORE</p>
+                <p id="score" class="text-[64px] text-[#565468] font-bold">0</p>
+            </div>
+        </div>
+    </div>
+    
     
     <!-- Choose zone -->
-    <section class="flex justify-center mt-25" id="chooseZone">
-        <div class="grid grid-cols-2 grid-rows-2 gap-x-14">
-            <button class="place-self-center">
-                <img class="hand" src="./images/paper.svg" alt="paper">
+    <section class="flex justify-center py-[100px]" id="chooseZone">
+        <div class="grid grid-cols-2 grid-rows-2 w-full max-w-[400px] gap-x-20 gap-y-6 bg-no-repeat bg-center bg-[url('../images/path.svg')]" id="zoneGrid">
+            <button class="place-items-center">
+                <img class="hand w-[145px] h-[145px]" src="./images/paper.svg" alt="paper">
             </button>
-            <button class="place-self-center">
-                <img class="hand" src="./images/scissors.svg" alt="scissors">
+            <button class="place-items-center">
+                <img class="hand w-[145px] h-[145px]" src="./images/scissors.svg" alt="scissors">
             </button>
-            <button class="col-start-1 col-end-3 place-self-center">
-                <img class="hand" src="./images/rock.svg" alt="rock">
+            <button class="col-start-1 col-end-3 place-items-center">
+                <img class="hand w-[145px] h-[145px]" src="./images/rock.svg" alt="rock">
+            </button>
+            <button class="">
+                <img class="hand w-[145px] h-[145px] mode-hard hidden" src="./images/lizard.svg" alt="lizard">
+            </button>
+            <button class="">
+                <img class="hand w-[145px] h-[145px] mode-hard hidden" src="./images/spock.svg" alt="spock">
             </button>
         </div>
     </section>
 
     <!-- Status zone  -->
     <section class="hidden" id="statusZone">
-        <div class="flex justify-center gap-20 py-40">
+        <div class="flex justify-center gap-20 py-20">
 
             <!-- player -->
             <img class="player" src="" alt="">
@@ -48,22 +66,8 @@
         </div>
 
     </section>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+
+    <button class="btn btn-info absolute bottom-5 right-5" id="modeChanger">Easy mode</button>    
     
     <script type="module" src="./js/main.js"></script>
   </body>
