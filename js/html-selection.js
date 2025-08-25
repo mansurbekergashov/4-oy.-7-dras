@@ -6,10 +6,11 @@ const elChooseZone = document.getElementById("chooseZone");
 const elRefreshGameButton = document.getElementById("refreshGameButton");
 const elStatusText = document.getElementById("statusText");
 const elScore = document.getElementById("score");
-const elModeChanger=document.getElementById("modeChanger");
+const elModeChanger = document.getElementById("modeChanger");
+const elRules = document.getElementById("rules");
 const elHandsHard = document.querySelectorAll(".mode-hard");
-const elZoneGrid=document.getElementById("zoneGrid");
+const elZoneGrid = document.getElementById("zoneGrid");
 
 
 
-export { elHands, elPlayer, elStatusZone, elChooseZone, elRefreshGameButton, elAI, elStatusText, elScore, elModeChanger, elHandsHard, elZoneGrid };
+export { elHands, elPlayer, elStatusZone, elChooseZone, elRefreshGameButton, elAI, elStatusText, elScore, elModeChanger, elHandsHard, elZoneGrid, elRules };
