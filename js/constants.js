@@ -1,4 +1,4 @@
-import { elHands, elHandsHard, elZoneGrid } from "./html-selection.js";
+import { elHands, elHandsHard, elZoneGrid, elChooseZone } from "./html-selection.js";
 
 export const { rock, scissors, paper, spock, lizard } = {
     rock: "rock",
@@ -68,10 +68,15 @@ export function modeChanger(value) {
     if (value === "hard") {
         elZoneGrid.classList.remove("grid-cols-2", "grid-rows-2", "gap-x-20", "gap-y-6", "max-w-[400px]", "bg-[url('../images/path.svg')]");
         elZoneGrid.classList.add("grid-cols-2", "grid-rows-3", "gap-x-14", "gap-y-5", "max-w-[540px]", "bg-[url('../images/polygon.svg')]");
+        elChooseZone.classList.remove("pt-20");
+        elChooseZone.classList.add("pt-5");
+
 
 
     }
     else {
+        elChooseZone.classList.remove("pt-5");
+        elChooseZone.classList.add("pt-20");
         elZoneGrid.classList.remove("grid-cols-2", "grid-rows-3", "gap-x-14", "gap-y-5", "max-w-[540px]", "bg-[url('../images/polygon.svg')]");
         elZoneGrid.classList.add("grid-cols-2", "grid-rows-2", "gap-x-20", "gap-y-6", "max-w-[400px]", "bg-[url('../images/path.svg')]");
     }
