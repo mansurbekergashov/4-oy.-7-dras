@@ -1,4 +1,4 @@
-import { elHands, elHandsHard, elZoneGrid, elChooseZone } from "./html-selection.js";
+import { elHands, elZoneGrid, elChooseZone } from "./html-selection.js";
 
 export const { rock, scissors, paper, spock, lizard } = {
     rock: "rock",
@@ -11,74 +11,18 @@ export const { rock, scissors, paper, spock, lizard } = {
 export const hands = [rock, scissors, paper, spock, lizard];
 
 
-export let mode = "easy";
+export let mode = elZoneGrid.dataset.mode;
 
 export function modeChanger(value) {
     mode = value;
-
-
-    elHands.forEach((el) => {
-        let hand = el.alt;
-        if (hand === rock) {
-            if (value === "hard") {
-                el.parentElement.classList.remove("col-start-1", "col-end-3");
-            }
-            else {
-                el.parentElement.classList.add("col-start-1", "col-end-3");
-
-            }
-        }
-
-        if (hand === paper) {
-            if (value === "hard") {
-                el.parentElement.classList.add("col-start-1", "col-end-3", "translate-y-6");
-                
-            }
-            else {
-                el.parentElement.classList.remove("col-start-1", "col-end-3", "translate-y-6");
-            }
-
-        }
-
-        if (hand === lizard) {
-            if (value === "hard") {
-                el.classList.remove("hidden");
-                el.parentElement.classList.add("place-items-end");
-            }
-            else {
-                el.classList.add("hidden");
-                el.parentElement.classList.remove("place-items-end");
-            }
-
-        }
-
-        if (hand === spock) {
-            if (value === "hard") {
-                el.classList.remove("hidden");
-            }
-            else {
-                el.classList.add("hidden");
-            }
-
-        }
-
-    });
-
-
-    if (value === "hard") {
-        elZoneGrid.classList.remove("grid-cols-2", "grid-rows-2", "gap-x-20", "gap-y-6", "max-w-[400px]", "bg-[url('../images/path.svg')]");
-        elZoneGrid.classList.add("grid-cols-2", "grid-rows-3", "gap-x-14", "gap-y-5", "max-w-[540px]", "bg-[url('../images/polygon.svg')]");
-        elChooseZone.classList.remove("pt-20");
+    elZoneGrid.dataset.mode = value;
+    if (mode ==="hard"){
+        elChooseZone.classList.remove("pt-40");
         elChooseZone.classList.add("pt-5");
-
-
-
     }
-    else {
+    else if (mode ==="easy"){
         elChooseZone.classList.remove("pt-5");
-        elChooseZone.classList.add("pt-20");
-        elZoneGrid.classList.remove("grid-cols-2", "grid-rows-3", "gap-x-14", "gap-y-5", "max-w-[540px]", "bg-[url('../images/polygon.svg')]");
-        elZoneGrid.classList.add("grid-cols-2", "grid-rows-2", "gap-x-20", "gap-y-6", "max-w-[400px]", "bg-[url('../images/path.svg')]");
+        elChooseZone.classList.add("pt-40");
     }
 
 };

@@ -8,9 +8,13 @@ const elStatusText = document.getElementById("statusText");
 const elScore = document.getElementById("score");
 const elModeChanger = document.getElementById("modeChanger");
 const elRules = document.getElementById("rules");
+const elCloseRules = document.getElementsByClassName("closeRules")
+const elEasyModeModal = document.getElementById("easyModeModal");
+const elHardModeModal = document.getElementById("hardModeModal");
 const elHandsHard = document.querySelectorAll(".mode-hard");
 const elZoneGrid = document.getElementById("zoneGrid");
+const elResultZone = document.getElementById("resultZone");
 
 
 
-export { elHands, elPlayer, elStatusZone, elChooseZone, elRefreshGameButton, elAI, elStatusText, elScore, elModeChanger, elHandsHard, elZoneGrid, elRules };
+export { elHands, elHandsHard, elPlayer, elStatusZone, elChooseZone, elRefreshGameButton, elAI, elStatusText, elScore, elModeChanger, elZoneGrid, elRules, elEasyModeModal, elResultZone, elCloseRules, elHardModeModal };
