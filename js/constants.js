@@ -18,10 +18,10 @@ export function modeChanger(value) {
     elZoneGrid.dataset.mode = value;
     if (mode ==="hard"){
         elChooseZone.classList.remove("pt-40");
-        elChooseZone.classList.add("pt-5");
+        elChooseZone.classList.add("pt-2");
     }
     else if (mode ==="easy"){
-        elChooseZone.classList.remove("pt-5");
+        elChooseZone.classList.remove("pt-2");
         elChooseZone.classList.add("pt-40");
     }
 

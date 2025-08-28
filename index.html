@@ -9,9 +9,9 @@
   <body class="bg-[radial-gradient(134.34%_134.34%_at_50%_0%,_#1F3757_0%,_#131537_100%)] h-full text-base sm:text-lg md:text-xl lg:text-2xl xl:text-4xl">
     
     <div class="flex justify-center pt-4">
-      <div class="md:w-175 md:h-[150px] w-[280px]  border-2 rounded-[15px] flex justify-around items-center">
-        <img class="md:w-[155px] md:h-[92px] w-[100px] h-[80px]" src="./images/logo.svg" alt="logo" />
-        <div class="md:w-[150px] md:h-[114px] w-[50px] h-[60px]  bg-box bg-[#F3F3F3] rounded-[8px] flex flex-col items-center justify-center">
+      <div class="md:w-175 md:h-[150px] w-[280px]  border-2 border-b-amber-50 rounded-[15px] flex justify-between items-center">
+        <img class="md:w-[155px] md:h-[100px] w-[100px] h-[80px] md:pl-8 pl-4" src="./images/logo.svg" alt="logo" />
+        <div class="md:w-[120px] md:h-[100px] w-[50px] h-[60px]  md:mr-8 mr-4 bg-box bg-[#F3F3F3] rounded-[8px] flex flex-col items-center justify-center">
           <p class="text-[#2A45C2] md:text-[20px] text-[10px] font-mono">SCORE</p>
           <p id="score" class="md:text-[60px] text-[24px] text-[#565468] font-bold">0</p>
         </div>
@@ -21,40 +21,40 @@
     <!-- Choose zone -->
     <section class="flex justify-center pt-40"  id="chooseZone">
       <div data-mode="easy"
-        class="group grid grid-cols-2 grid-rows-2 w-full max-w-[400px] md:gap-x-20 md:gap-y-6 gap-x-0 gap-y-6 bg-no-repeat bg-center md:bg-[url('../images/path.svg')] md:bg-auto bg-[url('../images/path.svg')] bg-size-[200px] data-[mode=hard]:grid-cols-2 data-[mode=hard]:grid-rows-3  md:data-[mode=hard]:gap-y-5  md:data-[mode=hard]:max-w-[540px]  md:data-[mode=hard]:bg-[url('../images/polygon.svg')] "
+        class="group grid grid-cols-2 grid-rows-2 w-full max-w-[400px] md:gap-x-20 md:gap-y-6 gap-x-0 gap-y-6 bg-no-repeat bg-center   md:bg-[url('../images/path.svg')]   md:bg-auto   bg-[url('../images/path.svg')] bg-size-[200px] data-[mode=hard]:grid-cols-2 data-[mode=hard]:grid-rows-3  md:data-[mode=hard]:gap-y-5   data-[mode=hard]:gap-x-8  md:data-[mode=hard]:max-w-[540px]  md:data-[mode=hard]:bg-[url('../images/polygon.svg')]  data-[mode=hard]:bg-[url('../images/polygon.svg')] "
         id="zoneGrid"
       >
-        <button class="place-items-center group-data-[mode=hard]:col-start-1 group-data-[mode=hard]:col-end-3 group-data-[mode=hard]:translate-y-6">
+        <button class="hand place-items-center group-data-[mode=hard]:col-start-1 group-data-[mode=hard]:col-end-3 group-data-[mode=hard]:translate-y-6">
           <img
-            class="md:w-[145px]  md:h-[145px] w-[100px] h-[100px]"
+            class="md:w-[145px]  md:h-[145px] w-[110px] h-[110px]"
             src="./images/paper.svg"
             alt="paper"
           />
         </button>
-        <button class="place-items-center">
+        <button class="hand place-items-center">
           <img
-            class="md:w-[145px] md:h-[145px] w-[100px] h-[100px]"
+            class="md:w-[145px] md:h-[145px] w-[110px] h-[110px]"
             src="./images/scissors.svg"
             alt="scissors"
           />
         </button>
-        <button class="group-data-[mode=easy]:col-start-1 group-data-[mode=easy]:col-end-3 place-items-center">
+        <button class="hand group-data-[mode=easy]:col-start-1 group-data-[mode=easy]:col-end-3 place-items-center">
           <img
-            class="md:w-[145px] md:h-[145px] w-[100px] h-[100px]"
+            class="md:w-[145px] md:h-[145px] w-[110px] h-[110px]"
             src="./images/rock.svg"
             alt="rock"
           />
         </button>
-        <button class="hidden group-data-[mode=hard]:block group-data-[mode=hard]:place-items-end">
+        <button class="hand hidden group-data-[mode=hard]:block group-data-[mode=hard]:place-items-end">
           <img
-            class="md:w-[145px] md:h-[145px] w-[100px] h-[100px] mode-hard "
+            class="md:w-[145px] md:h-[145px] w-[110px] h-[110px] mode-hard "
             src="./images/lizard.svg"
             alt="lizard"
           />
         </button>
-        <button class="hidden group-data-[mode=hard]:block">
+        <button class="hand hidden group-data-[mode=hard]:block">
           <img
-            class="md:w-[145px] md:h-[145px] w-[100px] h-[100px] mode-hard "
+            class="md:w-[145px] md:h-[145px] w-[110px] h-[110px] mode-hard "
             src="./images/spock.svg"
             alt="spock"
           />
@@ -94,36 +94,36 @@
 
     
     <!-- Rules button -->
-    <button class="btn btn-outline absolute md:bottom-5 md:right-20 bottom-5 md:left-auto md:-translate-x-auto  left-1/2 -translate-x-[110%] " id="rules">
+    <button class="btn btn-outline absolute bottom-5 right-40 border-b-amber-50 text-amber-50" id="rules">
       Rules
     </button>
 
-    <div id="easyModeModal" class="hidden bg-[white] md:w-[400px] md:h-[415px] rounded-[8px]  fixed top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]">
-      <span class="flex justify-between md:pl-8 md:pr-8">
+    <div id="easyModeModal" class="hidden bg-[white] md:w-[400px] md:h-[415px] w-[200px] h-[280px] rounded-[8px]  fixed top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]">
+      <span class="flex justify-between md:pl-8 md:pr-8 md:pt-0 pl-8 pr-8 pt-6">
         <h1 class="text-[#3B4262] md:text-[32px] font-bold md:pt-6">RULES</h1>
         <button class="md:pt-6 closeRules">
           <img src="./images/x.svg" alt="X" />
         </button>
       </span>
-      <img class="absolute md:px-12 md:py-10" src="./images/rules.svg" alt="Rules" />
+      <img class="absolute md:px-12 md:py-10 px-4 py-2 pt-10" src="./images/rules.svg" alt="Rules" />
     </div>
       
 
 
-    <div id="hardModeModal" class="hidden bg-[white] md:w-[400px] md:h-[415px] rounded-[8px] fixed top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] ">
-      <span class="flex justify-between items-center md:pl-8 md:pr-8">
-        <h1 class="text-[#3B4262] text-[32px] font-bold pt-6">RULES</h1>
+    <div id="hardModeModal" class="hidden bg-[white] md:w-[400px] md:h-[415px] w-[200px] h-[280px] rounded-[8px] fixed top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] ">
+      <span class="flex justify-between items-center md:pl-8 md:pr-8 md:pt-0 pl-8 pr-8 pt-6">
+        <h1 class="text-[#3B4262] md:text-[32px] font-bold md:pt-6">RULES</h1>
         <button class="md:pt-6 closeRules">
           <img src="./images/x.svg" alt="X"/>
         </button>
       </span>
-      <img class="absolute md:px-12 md:py-2" src="./images/rule-advanced.svg" alt="Rules" />
+      <img class="absolute md:px-12 md:py-2 px-4 py-2 pt-10" src="./images/rule-advanced.svg" alt="Rules" />
     </div>
 
 
 
     <!-- Mode button -->
-    <button class="btn btn-outline absolute md:bottom-5 md:right-10 bottom-5  md:left-auto md:-translate-x-auto  left-1/2 translate-x-[10%]" id="modeChanger">
+    <button class="btn btn-outline absolute bottom-5 right-5 border-b-amber-50 text-amber-50" id="modeChanger">
       Easy mode
     </button>
 
